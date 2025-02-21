@@ -18,4 +18,4 @@ Route::middleware([
     })->name('dashboard');
 });
 //our new route
-route::get('\home', [AdminController::class, 'index']);
+Route::get('/home', [AdminController::class, 'index']);
