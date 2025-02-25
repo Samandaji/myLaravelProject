@@ -8,20 +8,8 @@ use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
-    public function index()
+    public function post_page()
     {
-        if (Auth::id()) {
-            $usertype = Auth::user()->usertype; 
-
-            if ($usertype == 'user') {
-                return view('dashboard');
-            } elseif ($usertype == 'admin') {
-                return view('admin.index'); 
-            } else {
-                return redirect()->back();
-            }
-        }
-
-        return redirect('/login'); 
+       return view('post_page');
     }
 }
