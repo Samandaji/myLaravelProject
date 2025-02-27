@@ -22,12 +22,13 @@ class AdminController extends Controller
             }
         }
 
-        return redirect('/login'); 
+         Auth::logout();
+         return redirect('/login');
+        // return redirect('/login'); 
     }
-
-
     public function post_page()
     {
         return view('admin.post_page');
+
     }
 }

@@ -38,8 +38,8 @@
 
         <form>
 
-
-
+         <label>Post title</label>
+         <input type='text'>
 
 
         
