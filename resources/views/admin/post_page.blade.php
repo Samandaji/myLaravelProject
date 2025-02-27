@@ -12,6 +12,16 @@
       padding: 30px;
       color: white;
      }
+     .div_center
+     {
+      text-align: center;
+      padding: 30px;
+     }
+     
+     label{
+      display:inline-block;
+      width: 200px;
+     }
 
    </style>
   </head>
@@ -35,12 +45,26 @@
        <h1 class="post_title"> Add Post</h1>
 
        <div>
-
+       
         <form>
+    
+        <div class="div_center">
+            <label>Post Title</label>
+            <input type="text" name="title">
+        </div>
+        <div class="div_center">
+            <label>Post Description</label>
+            <textarea name="description"></textarea>
+        </div>
+        <div class="div_center">
+            <label>Add Image</label>
+            <input type="file" name="image">
+        </div>
 
-         <label>Post title</label>
-         <input type='text'>
+        <div class="div_center">
 
+            <input type="Submit" class="btn btn-primary">
+        </div>
 
         
         
