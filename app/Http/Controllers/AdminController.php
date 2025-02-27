@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User; 
 use Illuminate\Support\Facades\Auth; 
+use App\Models\post;
 
 class AdminController extends Controller
 {
@@ -30,5 +31,15 @@ class AdminController extends Controller
     {
         return view('admin.post_page');
 
+    }
+
+    public function add_post(Request $request)
+    {
+       $post=new post; //from post model
+
+       $post->title=$request->title;
+       $post->description=$request->description;
+       $post->save();
+       return redirect()->back();
     }
 }

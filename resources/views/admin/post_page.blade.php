@@ -4,26 +4,26 @@
    @include('admin.css')
    <style type='text/css'>
 
-     .post_title
-     {
-      font-size: 30px;
-      font-weight: bold;
-      text-align: center;
-      padding: 30px;
-      color: white;
-     }
-     .div_center
-     {
-      text-align: center;
-      padding: 30px;
-     }
-     
-     label{
-      display:inline-block;
-      width: 200px;
-     }
+              .post_title
+              {
+                font-size: 30px;
+                font-weight: bold;
+                text-align: center;
+                padding: 30px;
+                color: white;
+              }
+              .div_center
+              {
+                text-align: center;
+                padding: 30px;
+              }
+              
+              label{
+                display:inline-block;
+                width: 200px;
+              }
 
-   </style>
+            </style>
   </head>
   <body>
     <header>
@@ -46,7 +46,9 @@
 
        <div>
        
-        <form>
+        <form action="{{url('add_post')}}" method="POST" enctype="multipart/form-date">
+
+          @csrf
     
         <div class="div_center">
             <label>Post Title</label>
